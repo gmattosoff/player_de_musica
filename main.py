@@ -87,10 +87,10 @@ botoes = [
     criar_botao('Happy Day', 5, lambda: tocar('happyday'))
 ]
 
-play_img = PhotoImage(file='player_de_musica/imgs/play.png')
-pause_img = PhotoImage(file='player_de_musica/imgs/pause.png')
-next_img = PhotoImage(file='player_de_musica/imgs/next.png')
-prev_img = PhotoImage(file='player_de_musica/imgs/previous.png')
+play_img = PhotoImage(file='imgs/play.png')
+pause_img = PhotoImage(file='imgs/pause.png')
+next_img = PhotoImage(file='imgs/next.png')
+prev_img = PhotoImage(file='imgs/previous.png')
 
 control_frame = Frame(janela)
 control_frame.grid(row=6, pady=12)
