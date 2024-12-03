@@ -14,7 +14,7 @@ def tocar(song):
     global song_tocando
     mixer.music.stop()
     
-    mixer.music.load(f'songs/{song}.mp3')
+    mixer.music.load(f'player_de_musica/songs/{song}.mp3')
     mixer.music.play()
     mixer.music.set_volume(0.2)
     pause_btn = Button(control_frame, image=pause_img, borderwidth=0, command=pausar)
@@ -38,7 +38,6 @@ def pausar():
         pausado = True
         pause_btn = Button(control_frame, image=play_img, borderwidth=0, command=pausar)
     else:
-        play_img
         mixer.music.unpause()
         pausado = False
         pause_btn = Button(control_frame, image=pause_img, borderwidth=0, command=pausar)
@@ -87,15 +86,15 @@ botoes = [
     criar_botao('Happy Day', 5, lambda: tocar('happyday'))
 ]
 
-play_img = PhotoImage(file='imgs/play.png')
-pause_img = PhotoImage(file='imgs/pause.png')
-next_img = PhotoImage(file='imgs/next.png')
-prev_img = PhotoImage(file='imgs/previous.png')
+play_img = PhotoImage(file='player_de_musica/imgs/play.png')
+pause_img = PhotoImage(file='player_de_musica/imgs/pause.png')
+next_img = PhotoImage(file='player_de_musica/imgs/next.png')
+prev_img = PhotoImage(file='player_de_musica/imgs/previous.png')
 
 control_frame = Frame(janela)
 control_frame.grid(row=6, pady=12)
 
-pause_btn= Button(control_frame, image=play_img, borderwidth=0, command=pausar)
+pause_btn = Button(control_frame, image=play_img, borderwidth=0, command=pausar)
 next_btn = Button(control_frame, image=next_img, borderwidth=0, command=proxima)
 prev_btn = Button(control_frame, image=prev_img, borderwidth=0, command=anterior)
 
